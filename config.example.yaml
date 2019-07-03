@@ -33,6 +33,8 @@ blob_guilds:
   - 1234567890
   - 9876543210
 
+#ID of the role to give to users who get an emoji to the public approval.
+emoji_submitter: 1234567890
 
 # Emoji info
 approve_emoji_id: 1234567890
