@@ -301,7 +301,7 @@ class Suggestion:
         await self.update_inplace()
         
         if member:
-            member.add_roles(discord.Object(id=self.bot.config.emoji_submitter))
+            await member.add_roles(discord.Object(id=self.bot.config.emoji_submitter))
         
         if user:
             try:
