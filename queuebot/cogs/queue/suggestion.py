@@ -245,6 +245,7 @@ class Suggestion:
 
         user_id = self.user_id
         user = self.bot.get_user(user_id)
+        member = self.bot.get_guild(self.bot.config.blob_guilds[0]).get_member(user_id)
         emoji = self.bot.get_emoji(self.emoji_id)
 
         if not user:
@@ -298,7 +299,10 @@ class Suggestion:
         log.info('Set public_message_id -> %d', msg.id)
 
         await self.update_inplace()
-
+        
+        if member:
+            member.add_roles(discord.Object(id=self.bot.config.emoji_submitter))
+        
         if user:
             try:
                 await user.send(SUGGESTION_APPROVED.format(suggestion=emoji))
