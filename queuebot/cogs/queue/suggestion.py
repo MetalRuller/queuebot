@@ -302,7 +302,7 @@ class Suggestion:
         
         if member:
             role = self.bot.get_guild(self.bot.config.blob_guilds[0]).get_role(self.bot.config.emoji_submitter)
-            if role:
+            if role and role not in member.roles:
                 await member.add_roles(role)
         
         if user:
