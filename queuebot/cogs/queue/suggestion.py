@@ -301,7 +301,7 @@ class Suggestion:
         await self.update_inplace()
         
         if member:
-            role = member.guild.get_role(self.bot.config.emoji_submitte)
+            role = self.bot.get_guild(self.bot.config.blob_guilds[0]).get_role(self.bot.config.emoji_submitter)
             if role:
                 await member.add_roles(role)
         
