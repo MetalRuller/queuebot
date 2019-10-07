@@ -43,13 +43,14 @@ async def main():
             break
 
     bot = Queuebot(
-        command_prefix='q!',
+        command_prefix='!',
         fetch_offline_members=False,
         guild_subscriptions=False,
         max_messages=None,
         config=config,
         db=db,
     )
+
 
     bot.discover_exts('queuebot/cogs')
     bot.load_extension('jishaku')

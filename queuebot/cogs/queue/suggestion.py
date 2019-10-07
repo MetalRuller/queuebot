@@ -251,7 +251,10 @@ class Suggestion:
         log.info('Moving %s to the public queue.', self)
 
         user_id = self.user_id
+
         user = await self.bot.fetch_user(user_id)
+        member = self.bot.get_guild(self.bot.config.blob_guilds[0]).get_member(user_id)
+
         emoji = self.bot.get_emoji(self.emoji_id)
 
         if not user:
@@ -305,7 +308,12 @@ class Suggestion:
         log.info('Set public_message_id -> %d', msg.id)
 
         await self.update_inplace()
-
+        
+        if member:
+            role = self.bot.get_guild(self.bot.config.blob_guilds[0]).get_role(self.bot.config.emoji_submitter)
+            if role and role not in member.roles:
+                await member.add_roles(role)
+        
         if user:
             try:
                 await user.send(SUGGESTION_APPROVED.format(suggestion=emoji))

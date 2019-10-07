@@ -29,11 +29,11 @@ SUBMITTER_NOT_FOUND = (
 
 BAD_SUGGESTION_MSG = (
     'Heya! Looks like you tried to suggest '
-    'an emoji to the Blob Emoji Server. Unfortunately it looks like '
+    'an emoji to the Cowboy Emoji Server Unfortunately it looks like '
     'you didn\'t send your message in the right format, so I wasn\'t able '
     'to understand it. To suggest an emoji, you must post the emoji name, '
     'like so: `:my_emoji_name:` and upload the emoji as an attachment. Feel '
-    'free to try again, and if you are still having problems ask in <#289482554250100736>'
+    'free to try again.'
 )
 
 SUGGESTION_TOO_LARGE = (
@@ -47,14 +47,14 @@ SUGGESTION_TOO_LARGE = (
 
 SUGGESTION_RECEIVED = (
     'Thanks for your emoji submission ({suggestion}) to the '
-    'Blob Emoji Server! It\'s been added to our internal vote queue, '
+    'Cowboy Emoji Server! It\'s been added to our internal vote queue, '
     'so expect an update soon! Your suggestion was left in the channel as a '
     'public indication, please don\'t delete it!'
 )
 
 SUGGESTION_APPROVED = (
     'Looks like your emoji suggestion {suggestion} has passed through our '
-    'internal queue! Go vote for your suggestion in <#289847856033169409>!'
+    'internal queue! Go vote for your suggestion in <#595641425115217921>!'
 )
 
 SUGGESTION_DENIED = (
@@ -66,5 +66,5 @@ SUGGESTION_DENIED = (
 # hope this never happens :3
 BOT_BROKEN_MSG = (
     'Looks like QueueBot is currently having some technical difficulties. '
-    'The Blob Police have been informed and this problem will be fixed.'
+    'The Staff have been informed and this problem will be fixed.'
 )
