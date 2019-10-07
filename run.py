@@ -46,7 +46,7 @@ async def main():
         command_prefix='!',
         fetch_offline_members=False,
         guild_subscriptions=False,
-        max_messages=None,
+        max_messages=0,
         config=config,
         db=db,
     )
